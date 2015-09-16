@@ -9,12 +9,15 @@ def relative_link( url ):
     return result
 
 def clean_crappy_link( url ): 
-    ##i've allready encountered dumb broken links that have obvious mistakes.
-    ##let's fix them!
-    if has_http( chop_http(url) ):
-        return chop_http(url)
-    elif has_https( chop_https(url) ):
+    ## we found a dud, try and fix it!
+    if has_http( chop_http(url) ): ##http://http://www.etc.com
+        return chop_http(url)      
+    elif has_https( chop_https(url) ): ##https://https://
         return chop_https(url)
+    elif has_http( chop_https(url) ): ##https://http://
+        return chop_https(url)
+    elif has_https( chop_http(url) ): ##http://https://
+        return chop_http(url)
     else:
         return url
 
@@ -60,7 +63,6 @@ def has_http( test_url ):
 
 def has_https( test_url ):
     #print "has https:// " , test_url, test_url[:8] == 'https://'
-
     return test_url[:8] == 'https://'
 
 def chop_https( test_url ):
