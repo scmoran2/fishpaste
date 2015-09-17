@@ -5,18 +5,18 @@
 variables = "ijklmnopqrstuv" 
 c = False
 go = True
-for i in range(0,9):
+for i in range(0,10):
     if c:
         print "while(1){"
     if go:
         var = variables[i]
-        print "for " + var + ":=0; " + var + " != 255; " + var +"++ {\n"
+        print "for ;;;{\n"
 
 
-for i in range(0,9):
+for i in range(0,10):
     if c:
-        "bytes["+str(8-i)+"] += 1;\n print_bytes(bytes,10);\nif ( bytes["+str(9-i)+"] == UCHAR_MAX ){\n bytes["+str(9-i)+"] = 0; break;}}"
+        "bytes["+str(9-i)+"] += 1;\n print_bytes(bytes,10);\nif ( bytes["+str(9-i)+"] == UCHAR_MAX ){\n bytes["+str(9-i)+"] = 0; break;}}"
     if go:
-        var = variables[8-i]
-        print "bytes["+var+"] += 1\nif bytes["+var+"] == 255 {\n\tbytes["+var+"] = 0\n\tbreak\n}\n}\n"
+        var = 9-i
+        print "bytes["+str(var)+"] += 1\nif bytes["+str(var)+"] == 255 {\n\tbytes["+str(var)+"] = 0\n\tbreak\n}\n}\n"
 

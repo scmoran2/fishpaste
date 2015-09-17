@@ -6,92 +6,104 @@ import (
     "strings"
      )
 
+var bytes [10]byte
+  /*//This is a start for a better way to do this, 
+    //maybe generate them one at a time and we can just crawl from go too...
+
+func next_number () []byte{
+    for i :=
+    bytes[9]
+    return bytes[:]
+}
+*/
 func main() {
 
-var bytes [10]byte
+//LETS DO IT THE DUMB WAAAY
 
-for i:=0; i  < 10; i++ {
+//10 loops for 10 bytes
+for { 
+for {
+for {
+for {
+for {
+for {
+for {
+for {
+for {
+for {
+    bytes[9] += 1
+    str := base32.StdEncoding.EncodeToString( bytes[:] )
+    fmt.Println(strings.ToLower(str) )
+    if bytes[9] == 255 {
+        bytes[9] = 0
+        break
+    }
+    }
 
-for j:=0; j  < 10; j++ {
+    bytes[8] += 1
+    str := base32.StdEncoding.EncodeToString( bytes[:] )
+    fmt.Println(strings.ToLower(str) )
+    if bytes[8] == 255 {
+        bytes[8] = 0
+        break
+    }
+    }
 
-for k:=0; k  < 10; k++ {
+    bytes[7] += 1
+    if bytes[7] == 255 {
+        bytes[7] = 0
+        break
+    }
+    }
 
-for l:=0; l  < 10; l++ {
+    bytes[6] += 1
+    if bytes[6] == 255 {
+        bytes[6] = 0
+        break
+    }
+    }
 
-for m:=0; m  < 10; m++ {
+    bytes[5] += 1
+    if bytes[5] == 255 {
+        bytes[5] = 0
+        break
+    }
+    }
 
-for n:=0; n  < 10; n++ {
+    bytes[4] += 1
+    if bytes[4] == 255 {
+        bytes[4] = 0
+        break
+    }
+    }
 
-for o:=0; o  < 10; o++ {
+    bytes[3] += 1
+    if bytes[3] == 255 {
+        bytes[3] = 0
+        break
+    }
+    }
 
-for p:=0; p  < 10; p++ {
+    bytes[2] += 1
+    if bytes[2] == 255 {
+        bytes[2] = 0
+        break
+    }
+    }
 
-for q:=0; q < 10; q++ {
+    bytes[1] += 1
+    if bytes[1] == 255 {
+        bytes[1] = 0
+        break
+    }
+    }
 
-bytes[q] += 1
-str := base32.StdEncoding.EncodeToString( bytes[:] )
-fmt.Println(strings.ToLower(str) )
-if bytes[q] == 255 {
-    bytes[q] = 0
-    break
-}
-}
-
-bytes[p] += 1
-if bytes[p] == 255 {
-    bytes[p] = 0
-    break
-}
-}
-
-bytes[o] += 1
-if bytes[o] == 255 {
-    bytes[o] = 0
-    break
-}
-}
-
-bytes[n] += 1
-if bytes[n] == 255 {
-    bytes[n] = 0
-    break
-}
-}
-
-bytes[m] += 1
-if bytes[m] == 255 {
-    bytes[m] = 0
-    break
-}
-}
-
-bytes[l] += 1
-if bytes[l] == 255 {
-    bytes[l] = 0
-    break
-}
-}
-
-bytes[k] += 1
-if bytes[k] == 255 {
-    bytes[k] = 0
-    break
-}
-}
-
-bytes[j] += 1
-if bytes[j] == 255 {
-    bytes[j] = 0
-    break
-}
-}
-
-bytes[i] += 1
-if bytes[i] == 255 {
-    bytes[i] = 0
-    break
-}
-}
+    bytes[0] += 1
+    if bytes[0] == 255 {
+        bytes[0] = 0
+        break
+    }
+    }
 
 
 }
