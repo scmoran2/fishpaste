@@ -12,6 +12,7 @@ import io
 
 SOCKS_PORT = 9050 #default tor proxy
 #tor process needs to be running allready
+#and set to allow socks connections to happen
 
 def get_site(url):
     ##more sample code sampled from...
@@ -40,7 +41,7 @@ def print_bootstrap_lines(line):
 
 
 if __name__=='__main__':
-    url = "http://www.cse.buffalo.edu/~mgmcgove/"
+    url = "http://64.31.47.121:9030/tor/rendezvous2/"
     print term.format("Connecting to: ", term.Color.BLUE),
     print term.format(url, term.Color.YELLOW)
     print(term.format(get_site(url), term.Color.RED))
